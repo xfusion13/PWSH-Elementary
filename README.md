@@ -1,6 +1,3 @@
-# PWSH-Simple
-Elementary powershell automation script.
-
 ## xrunas
 Elementary script run runas or module pth mimikatz
 ### Usage
