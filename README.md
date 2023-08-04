@@ -84,3 +84,4 @@ Invoke-SimpleCollector -Credential $creds -Server meereen.essos.local
 -c [-Credential] Credential
 -f [-Folder]     Loot folder
 ```
+![2](./images/2.png)
