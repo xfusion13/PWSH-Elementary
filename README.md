@@ -1,5 +1,4 @@
 ## xrunas
----
 Elementary script run runas or module pth mimikatz
 ### Usage
 ```powershell
@@ -24,7 +23,6 @@ xrunas -d essos.local -u khal.drogo -H 739120ebc4dd940310bc4bb5c9d37021 -mpath "
 -r -- run program (default:pwsh)
 ```
 ## New-DomainPreset
----
 Elementary script change default parameters (-Server, -Credential) by `$PSDefaultParameterValues` for ActiveDirectory (RSAT) module and some another commandlets.
 Add another modules or cmdlets possible in utils.psm1
 Also, set global variable `$creds.`
