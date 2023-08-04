@@ -63,3 +63,4 @@ if($policyinfo){
     Write-Host "[!] Success, domain policy collected." -ForegroundColor Green;
     Write-Host "    - saved to $ppath" -ForegroundColor Green;
 }
+Write-Host
