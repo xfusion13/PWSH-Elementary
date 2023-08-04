@@ -71,7 +71,7 @@ Obtain information:
 
 ### Usage
 ```powershell
-New-DomainPreset -d essos.local -u khal.drogo -p 'horse' -s meereen.essos.local;
+New-DomainPreset -d essos.local -u khal.drogo -p 'horse' -s meereen.essos.local
 
 Invoke-SimpleCollector
 ```
