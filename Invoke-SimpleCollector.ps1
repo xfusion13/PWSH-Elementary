@@ -20,10 +20,10 @@ $mpath = $($Folder + "\machines.csv")
 $ppath = $($Folder + "\policy.csv")
 
 $AddArguments = @{}
-if ($lcrds){$AddArguments['Credential']=$lcrds}
-if ($Server){$AddArguments['Server']=$Server}
+if ($Credential){$AddArguments.Credential = $Credential}
+if ($Server){$AddArguments.Server = $Server}
 
-$userinfo = Get-ADUser -Filter * @AddArguments -Properties * `
+$userinfo = Get-ADUser -Filter * -Properties * @AddArguments `
 | Select-Object `
 Enabled, adminCount,SamAccountName, EmailAddress, Department, Description, DisplayName, objectSid, DistinguishedName,`
 DoesNotRequirePreAuth, PasswordNotRequired, PasswordExpired, whenCreated,AccountExpirationDate,PasswordLastSet, LastLogonDate,`
@@ -35,7 +35,7 @@ if ($userinfo) {
     Write-Host "    - saved to $upath" -ForegroundColor Green;
 }
 
-$compinfo =  Get-ADComputer -Filter * @AddArguments -Properties * `
+$compinfo =  Get-ADComputer -Filter * -Properties * @AddArguments `
 | Select-Object `
 Enabled, adminCount, SamAccountName, DNSHostName, IPv4Address, OperatingSystem, OperatingSystemVersion, Description,`
 objectSid, DistinguishedName,`DoesNotRequirePreAuth, PasswordNotRequired, whenCreated, PasswordLastSet, LastLogonDate,`
@@ -63,8 +63,4 @@ if($policyinfo){
     Write-Host "[!] Success, domain policy collected." -ForegroundColor Green;
     Write-Host "    - saved to $ppath" -ForegroundColor Green;
 }
-<<<<<<< HEAD
 Write-Host
-=======
-Write-Host
->>>>>>> 519394e6bd7900b23e4c7564db459b6bcb5165d3
