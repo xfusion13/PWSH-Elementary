@@ -64,7 +64,7 @@ New-DomainPreset -f
 
 ## Invoke-SimpleCollector
 Collect some information about target domain and export to csv file for further export to Excel.
-You can use with `New-DomainPreset` or `xrunas`.
+You can use with `New-DomainPreset`.
 Obtain information:
 - user accounts;
 - machine accounts;
