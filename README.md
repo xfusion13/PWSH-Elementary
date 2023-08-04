@@ -28,7 +28,7 @@ xrunas -d essos.local -u khal.drogo -H 739120ebc4dd940310bc4bb5c9d37021 -mpath "
 Elementary script change default parameters (-Server, -Credential) by `$PSDefaultParameterValues` for ActiveDirectory (RSAT) module and some another commandlets.
 Add another modules or cmdlets possible in utils.psm1
 Also, set global variable `$creds.`
-Expected, module ActiveDirectory installed else you can install with command:
+Expected, module ActiveDirectory installed, else you can install with command:
 ```
 Add-WindowsCapability -online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
 ```
