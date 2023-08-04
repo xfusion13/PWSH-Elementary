@@ -1,5 +1,4 @@
 ## xrunas
----
 Elementary script run runas or module pth mimikatz
 ### Usage
 ```powershell
@@ -24,7 +23,6 @@ xrunas -d essos.local -u khal.drogo -H 739120ebc4dd940310bc4bb5c9d37021 -mpath "
 -r -- run program (default:pwsh)
 ```
 ## New-DomainPreset
----
 Elementary script change default parameters (-Server, -Credential) by `$PSDefaultParameterValues` for ActiveDirectory (RSAT) module and some another commandlets.
 Add another modules or cmdlets possible in utils.psm1
 Also, set global variable `$creds.`
@@ -48,7 +46,6 @@ New-DomainPreset -c 0
 ```
 New-DomainPreset -f
 ```
-![1](./images/1.png)
 
 ### Help
 ```
@@ -62,18 +59,19 @@ New-DomainPreset -f
 -x [-x]        Add PSDrive Active Directory (AD)
 -h [-Help]     Print help message
 ```
+![1](./images/1.png)
 
 ## Invoke-SimpleCollector
 Collect some information about target domain and export to csv file for further export to Excel.
 Obtain information:
 - user accounts;
 - machine accounts;
-- default domain policy.
+- default domain policy;
 - Fine-Grained password policies.
 
 ### Usage
 ```powershell
-New-DomainPreset -d essos.local -u khal.drogo -p 'horse' -s meereen.essos.local;
+New-DomainPreset -d essos.local -u khal.drogo -p 'horse' -s meereen.essos.local
 
 Invoke-SimpleCollector
 ```
@@ -82,7 +80,7 @@ Invoke-SimpleCollector -Credential $creds -Server meereen.essos.local
 ```
 ### Help
 ```
--s [-Server]     Domain Controller IP or FQDN"
--c [-Credential] Credential"
+-s [-Server]     Domain Controller IP or FQDN
+-c [-Credential] Credential
 -f [-Folder]     Loot folder
 ```
