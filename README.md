@@ -62,3 +62,27 @@ New-DomainPreset -f
 -x [-x]        Add PSDrive Active Directory (AD)
 -h [-Help]     Print help message
 ```
+
+## Invoke-SimpleCollector
+Collect some information about target domain and export to csv file for further export to Excel.
+Obtain information:
+- user accounts;
+- machine accounts;
+- default domain policy.
+- Fine-Grained password policies.
+
+### Usage
+```powershell
+New-DomainPreset -d essos.local -u khal.drogo -p 'horse' -s meereen.essos.local;
+
+Invoke-SimpleCollector
+```
+```powershell
+Invoke-SimpleCollector -Credential $creds -Server meereen.essos.local
+```
+### Help
+```
+-s [-Server]     Domain Controller IP or FQDN"
+-c [-Credential] Credential"
+-f [-Folder]     Loot folder
+```
