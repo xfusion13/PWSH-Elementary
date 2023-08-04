@@ -65,6 +65,10 @@ New-DomainPreset -f
 ## Invoke-SimpleCollector
 Collect some information about target domain and export to csv file for further export to Excel.
 You can use with `New-DomainPreset` or `xrunas`.
+Expected, module ActiveDirectory installed, else you can install with command:
+```
+Add-WindowsCapability -online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+```
 Obtain information:
 - user accounts;
 - machine accounts;
