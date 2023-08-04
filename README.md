@@ -46,7 +46,6 @@ New-DomainPreset -c 0
 ```
 New-DomainPreset -f
 ```
-![1](./images/1.png)
 
 ### Help
 ```
@@ -60,6 +59,7 @@ New-DomainPreset -f
 -x [-x]        Add PSDrive Active Directory (AD)
 -h [-Help]     Print help message
 ```
+![1](./images/1.png)
 
 ## Invoke-SimpleCollector
 Collect some information about target domain and export to csv file for further export to Excel.
