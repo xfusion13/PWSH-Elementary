@@ -66,7 +66,7 @@ Collect some information about target domain and export to csv file for further 
 Obtain information:
 - user accounts;
 - machine accounts;
-- default domain policy.
+- default domain policy;
 - Fine-Grained password policies.
 
 ### Usage
