@@ -1,4 +1,12 @@
-param ([string] $domain, [string] $username, [string] $passwd, [string] $hash, [string] $mpath="mimikatz.exe", [string] $run="cmd.exe")
+param (
+    [string] $domain, 
+    [string] $username, 
+    [string] $passwd, 
+    [string] $hash, 
+    [string] $mpath="mimikatz.exe", 
+    [string] $run="`"pwsh -nologo`"")
+
+# $run="`"wt nt -p PowerShell --title $domain/$username`""
 
 if ($domain -eq '') {
     write-host "[Error] Please enter a target domain." 
@@ -11,7 +19,7 @@ if ($username -eq '') {
 
 function Invoke-RunAs {
     $WshShell = New-Object -ComObject "Wscript.Shell"
-    Start-Process -NoNewWindow runas -Arg "/netonly","/user:$username@$domain","$run"
+    Start-Process -NoNewWindow runas -Arg "/netonly","/user:$username@$domain", $run
     Start-Sleep -Milliseconds 100
     $WshShell.SendKeys($passwd)
     $WshShell.SendKeys("{ENTER}")
