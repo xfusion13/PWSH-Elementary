@@ -80,7 +80,7 @@ Invoke-SimpleCollector -Credential $creds -Server meereen.essos.local
 ```
 ### Help
 ```
--s [-Server]     Domain Controller IP or FQDN"
--c [-Credential] Credential"
+-s [-Server]     Domain Controller IP or FQDN
+-c [-Credential] Credential
 -f [-Folder]     Loot folder
 ```
