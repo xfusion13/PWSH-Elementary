@@ -46,4 +46,18 @@ function New-PSDefParameters {
 
 }
 
+function Get-Passwd {
+    $uppercase = "ABCDEFGHKLMNOPRSTUVWXYZ".tochararray()
+    $lowercase = "abcdefghiklmnoprstuvwxyz".tochararray()
+    $number    = "0123456789".tochararray()
+    $special   = "$%&/()=?}{@#*+!-".tochararray()
+
+    $password =  ($uppercase | Get-Random -count 2) -join ''
+    $password += ($lowercase | Get-Random -count 5) -join ''
+    $password += ($number    | Get-Random -count 3) -join ''
+    $password += ($special   | Get-Random -count 2) -join ''
+
+    return (($password.tochararray() | Get-Random -Count 12) -join '')
+}
+
 Export-ModuleMember -Function *
